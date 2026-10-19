@@ -345,12 +345,7 @@ install_fixes() {
 ### MISC FUNCTIONS ###
 
 check_user_is_chud() {
-  if grep -i omarchy /etc/os-release>/dev/null || \
-  grep lunduke /etc/os-release>/dev/null
-  then
-    echo_error "Use a real distro"
-    exit
-  fi
+  return 0
 }
 
 check_nix() {
